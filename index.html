@@ -1,7 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change coor with JS</title>
   <style>
     :root {
       --blue: #1e90ff;
@@ -42,29 +45,10 @@
       transform: translateY(7px);
     }
 
-    a{
+    a {
       text-decoration: none;
     }
   </style>
-
-  <script>
-    var r = document.querySelector(':root');
-
-    function myFunction_get() {
-      var rs = getComputedStyle(r);
-      alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
-    }
-
-    function myFunction_set() {
-      var randomR = Math.floor(Math.random() * 256);
-      var randomG = Math.floor(Math.random() * 256);
-      var randomB = Math.floor(Math.random() * 256);
-
-      var randomColor = 'rgb(' + randomR + ',' + randomG + ',' + randomB + ')';
-
-      r.style.setProperty('--blue', randomColor);
-    }
-  </script>
 </head>
 
 <body>
@@ -85,6 +69,27 @@
   <button type="button" onclick="myFunction_get()">Color Name</button>
   <button type="button" onclick="myFunction_set()">Change Color</button>
   <button><a href="https://github.com/Muhammadqasim1011/Change-Color-Variables">Source Code</a></button>
+
+
+
+  <script>
+    var r = document.querySelector(':root');
+
+    function myFunction_get() {
+      var rs = getComputedStyle(r);
+      alert("The value of --blue is: " + rs.getPropertyValue('--blue'));
+    }
+
+    function myFunction_set() {
+      var randomR = Math.floor(Math.random() * 256);
+      var randomG = Math.floor(Math.random() * 256);
+      var randomB = Math.floor(Math.random() * 256);
+
+      var randomColor = 'rgb(' + randomR + ',' + randomG + ',' + randomB + ')';
+
+      r.style.setProperty('--blue', randomColor);
+    }
+  </script>
 
 </body>
 
